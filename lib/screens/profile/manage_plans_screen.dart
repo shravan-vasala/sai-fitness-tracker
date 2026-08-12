@@ -181,11 +181,11 @@ class _MealSlotsEditorState extends ConsumerState<_MealSlotsEditor> {
               ref.read(profileProvider.notifier).updateProfile(
                     profile.copyWith(customMealSlots: updatedSlots),
                   );
-              },
-              child: Text('Save'),
-            ),
-          ],
-        ),
+              Navigator.pop(ctx);
+            },
+            child: Text('Save'),
+          ),
+        ],
       ),
     );
   }
