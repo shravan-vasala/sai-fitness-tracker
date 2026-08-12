@@ -1,0 +1,39 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          
+      - run: flutter pub get
+      
+      - run: flutter analyze || true
+      
+      - name: Build APK
+        run: flutter build apk --release
+        
+      - name: Rename APK
+        run: mv build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/sthira-release.apk || true
+        
+      - name: Extract Keystore SHA1
+        run: |
+          keytool -list -v -keystore android/app/debug.keystore -alias androiddebugkey -storepass android -keypass android > build/app/outputs/flutter-apk/keystore-info.txt
+        
+      - name: Upload APK
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sthira-release
+          path: |
+            build/app/outputs/flutter-apk/sthira-release.apk
+            build/app/outputs/flutter-apk/keystore-info.txt

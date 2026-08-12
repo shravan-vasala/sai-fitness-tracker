@@ -1,0 +1,60 @@
+{
+  "planName": "Daily Nutrition Plan",
+  "totalCalories": 1200,
+  "meals": [
+    {
+      "name": "Breakfast",
+      "type": "breakfast",
+      "calories": 250,
+      "items": [
+        {"name": "Whole Boiled Eggs", "quantity": "2 large", "calories": 140},
+        {"name": "Sprout Chaat / Veggies", "quantity": "1 bowl", "calories": 110}
+      ],
+      "suggestions": [
+        "2 Whole Boiled Eggs + 1 bowl of Sprout/Chaat / Veggies.",
+        "150g Milkmist Plain Greek Yogurt mixed with seeds or a handful of sprouts."
+      ]
+    },
+    {
+      "name": "Lunch",
+      "type": "lunch",
+      "calories": 425,
+      "items": [
+        {"name": "Cooked White/Brown Rice", "quantity": "150g", "calories": 195},
+        {"name": "Chicken Breast Curry or Paneer", "quantity": "100g", "calories": 150},
+        {"name": "Veggies / Dal", "quantity": "1 bowl", "calories": 80}
+      ],
+      "suggestions": [
+        "100g to 150g Cooked White/Brown Rice (or 2 small Chapathis) + 80g Paneer / 100g Chicken breast curry (cooked with minimal oil) + 1 bowl Veggies/Dal.",
+        "150g Rice + Generous portion of Soya Chunks (~40g dry weight) + Veggie curry."
+      ]
+    },
+    {
+      "name": "Evening Snack",
+      "type": "snack",
+      "calories": 125,
+      "items": [
+        {"name": "Guava or Dragonfruit", "quantity": "1 cup", "calories": 60},
+        {"name": "Almonds / Walnuts", "quantity": "Small handful", "calories": 65}
+      ],
+      "suggestions": [
+        "1 cup Guava or Dragonfruit.",
+        "Black Coffee / Green Tea + a small handful of almonds/walnuts."
+      ]
+    },
+    {
+      "name": "Dinner",
+      "type": "dinner",
+      "calories": 400,
+      "items": [
+        {"name": "Chapathis", "quantity": "2 small", "calories": 180},
+        {"name": "Grilled/Curry Chicken or Soya", "quantity": "80g", "calories": 140},
+        {"name": "Veggies", "quantity": "1 bowl", "calories": 80}
+      ],
+      "suggestions": [
+        "2 Small Chapathis (or 100g Idli/Dosa batter cooked into thin dosas) + 60–80g Grilled/Curry Chicken or Soya Chunks + Veggies.",
+        "1 bowl of leafy green dal + 1 cup low-fat curd + 1 small Chapathi or light rice portion."
+      ]
+    }
+  ]
+}
