@@ -152,61 +152,35 @@ class _MealSlotsEditorState extends ConsumerState<_MealSlotsEditor> {
 
   void _editSlot(Map<String, dynamic> slot, int index) {
     final nameCtrl = TextEditingController(text: slot['name'] as String);
-    String selectedEmoji = slot['emoji'] as String;
-    final emojis = ['🍴', '🥤', '🍌', '🥜', '🍚', '🫖', '🍪', '🥩', '🥑', '🥪', '🥣', '🥗', '🍳', '🍛', '🍎', '🍽️'];
 
     showDialog(
       context: context,
-      builder: (ctx) => StatefulBuilder(
-        builder: (context, setStateDialog) => AlertDialog(
-          title: Text('Edit Meal Slot'),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextField(
-                controller: nameCtrl,
-                decoration: InputDecoration(labelText: 'Name'),
-              ),
-              SizedBox(height: 16),
-              Text('Emoji:'),
-              SizedBox(height: 8),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: emojis.map((e) {
-                  final isSelected = e == selectedEmoji;
-                  return GestureDetector(
-                    onTap: () => setStateDialog(() => selectedEmoji = e),
-                    child: Container(
-                      padding: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: isSelected ? context.colors.primary : context.colors.border),
-                        borderRadius: BorderRadius.circular(8),
-                        color: isSelected ? context.colors.primary.withValues(alpha: 0.1) : null,
-                      ),
-                      child: Text(e, style: TextStyle(fontSize: 20)),
-                    ),
+      builder: (ctx) => AlertDialog(
+        title: Text('Edit Meal Slot'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextField(
+              controller: nameCtrl,
+              decoration: InputDecoration(labelText: 'Name'),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text('Cancel')),
+          ElevatedButton(
+            onPressed: () {
+              final profile = ref.read(profileProvider);
+              final updatedSlots = List<Map<String, dynamic>>.from(profile.customMealSlots);
+              updatedSlots[index] = {
+                ...updatedSlots[index],
+                'name': nameCtrl.text.trim(),
+                'emoji': '',
+              };
+              ref.read(profileProvider.notifier).updateProfile(
+                    profile.copyWith(customMealSlots: updatedSlots),
                   );
-                }).toList(),
-              ),
-            ],
-          ),
-          actions: [
-            TextButton(onPressed: () => Navigator.pop(ctx), child: Text('Cancel')),
-            ElevatedButton(
-              onPressed: () {
-                final profile = ref.read(profileProvider);
-                final updatedSlots = List<Map<String, dynamic>>.from(profile.customMealSlots);
-                updatedSlots[index] = {
-                  ...slot,
-                  'name': nameCtrl.text.trim(),
-                  'emoji': selectedEmoji,
-                };
-                ref.read(profileProvider.notifier).updateProfile(
-                      profile.copyWith(customMealSlots: updatedSlots),
-                    );
-                Navigator.pop(ctx);
               },
               child: Text('Save'),
             ),

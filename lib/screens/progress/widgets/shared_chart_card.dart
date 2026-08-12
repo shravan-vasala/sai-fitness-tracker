@@ -75,13 +75,7 @@ class SharedChartCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: context.colors.card,
             borderRadius: BorderRadius.circular(kCardRadius),
-            boxShadow: [
-              BoxShadow(
-                color: context.colors.primary.withValues(alpha: 0.05),
-                blurRadius: 10,
-                offset: const Offset(0, 2),
-              ),
-            ],
+            border: Border.all(color: context.colors.border),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,8 +100,8 @@ class SharedChartCard extends StatelessWidget {
                           vertical: 4,
                         ),
                         decoration: BoxDecoration(
-                          color: context.colors.lavenderCard,
-                          borderRadius: BorderRadius.circular(8),
+                          color: context.colors.primary.withValues(alpha: 0.1),
+                          borderRadius: BorderRadius.circular(0),
                         ),
                         child: Text(
                           useKg ? 'KG' : 'LB',
@@ -149,13 +143,7 @@ class SharedChartCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: context.colors.card,
               borderRadius: BorderRadius.circular(kCardRadius),
-              boxShadow: [
-                BoxShadow(
-                  color: context.colors.primary.withValues(alpha: 0.05),
-                  blurRadius: 10,
-                  offset: const Offset(0, 2),
-                ),
-              ],
+              border: Border.all(color: context.colors.border),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

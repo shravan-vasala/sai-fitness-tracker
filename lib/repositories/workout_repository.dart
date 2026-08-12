@@ -25,6 +25,10 @@ class WorkoutRepository {
       final jsonStr = await rootBundle.loadString('assets/data/seed_workout_plan.json');
       final plan = WorkoutPlan.fromJson(jsonDecode(jsonStr) as Map<String, dynamic>);
       _planBox.put('beginner_plan', plan);
+
+      final gymJsonStr = await rootBundle.loadString('assets/data/gym_split_plan.json');
+      final gymPlan = WorkoutPlan.fromJson(jsonDecode(gymJsonStr) as Map<String, dynamic>);
+      _planBox.put('gym_split_plan', gymPlan);
     }
   }
 
@@ -36,7 +40,7 @@ class WorkoutRepository {
     return _planBox.get(key);
   }
 
-  /// Resolves the plan for [preferredKey], falling back to `beginner_plan`
+  /// Resolves the plan for [preferredKey], falling back to `gym_split_plan`
   /// then the first stored plan (same pattern as meal plans).
   WorkoutPlan? getActivePlan({String? preferredKey}) {
     if (_planBox.isEmpty) return null;
@@ -44,7 +48,7 @@ class WorkoutRepository {
       final preferred = getPlan(preferredKey);
       if (preferred != null) return preferred;
     }
-    return getPlan('beginner_plan') ??
+    return getPlan('gym_split_plan') ??
         getPlan(_planBox.keys.first as String);
   }
 

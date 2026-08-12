@@ -135,7 +135,7 @@ class DailyScoreSheet extends ConsumerWidget {
                 score: scoreData.waterScore,
                 max: scoreData.waterMax,
                 icon: Icons.water_drop_rounded,
-                color: Colors.lightBlue,
+                color: context.colors.textDark,
               ),
             SizedBox(height: 24),
             Text(

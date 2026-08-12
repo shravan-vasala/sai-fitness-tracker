@@ -32,10 +32,10 @@ class UserProfile {
     this.activeMealPlan,
     this.customHabits = const [],
     this.customMealSlots = const [
-      {'id': 'breakfast', 'name': 'Breakfast', 'emoji': '🍳', 'isDefault': true},
-      {'id': 'lunch', 'name': 'Lunch', 'emoji': '🍛', 'isDefault': true},
-      {'id': 'snack', 'name': 'Snack', 'emoji': '🍎', 'isDefault': true},
-      {'id': 'dinner', 'name': 'Dinner', 'emoji': '🍽️', 'isDefault': true},
+      {'id': 'breakfast', 'name': 'Breakfast', 'emoji': '', 'isDefault': true},
+      {'id': 'lunch', 'name': 'Lunch', 'emoji': '', 'isDefault': true},
+      {'id': 'snack', 'name': 'Snack', 'emoji': '', 'isDefault': true},
+      {'id': 'dinner', 'name': 'Dinner', 'emoji': '', 'isDefault': true},
     ],
     this.geminiApiKey,
     this.restTimerSound = true,
@@ -95,10 +95,10 @@ class UserProfile {
               ?.map((h) => Map<String, dynamic>.from(h as Map))
               .toList() ??
           [
-            {'id': 'breakfast', 'name': 'Breakfast', 'emoji': '🍳', 'isDefault': true},
-            {'id': 'lunch', 'name': 'Lunch', 'emoji': '🍛', 'isDefault': true},
-            {'id': 'snack', 'name': 'Snack', 'emoji': '🍎', 'isDefault': true},
-            {'id': 'dinner', 'name': 'Dinner', 'emoji': '🍽️', 'isDefault': true},
+            {'id': 'breakfast', 'name': 'Breakfast', 'emoji': '', 'isDefault': true},
+            {'id': 'lunch', 'name': 'Lunch', 'emoji': '', 'isDefault': true},
+            {'id': 'snack', 'name': 'Snack', 'emoji': '', 'isDefault': true},
+            {'id': 'dinner', 'name': 'Dinner', 'emoji': '', 'isDefault': true},
           ],
       geminiApiKey: json['geminiApiKey'] as String?,
       restTimerSound: json['restTimerSound'] as bool? ?? true,

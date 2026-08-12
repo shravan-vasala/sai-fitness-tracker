@@ -136,70 +136,70 @@ Use a friendly, casual tone and 1-2 emojis. Do not use quotes.
 
     if (hour < 12) {
       generics = [
-        "Good morning, $n! Let's make today amazing. 🌅",
-        "Rise and shine, $n! Drink some water and start the day strong. 💧",
-        "Morning, $n! Today is a blank canvas. Let's crush it! 🎨",
-        "Wakey wakey, $n! Time to get those endorphins flowing. ⚡",
-        "Good morning! Let's start the day with a healthy choice, $n. 🍎",
-        "A new day is a new opportunity, $n. Go get 'em! 🚀",
-        "Morning, $n! Take a deep breath and let's tackle your goals. 🧘"
+        "Good morning, $n! Let's make today amazing.",
+        "Rise and shine, $n! Drink some water and start the day strong.",
+        "Morning, $n! Today is a blank canvas. Let's crush it!",
+        "Wakey wakey, $n! Time to get those endorphins flowing.",
+        "Good morning! Let's start the day with a healthy choice, $n.",
+        "A new day is a new opportunity, $n. Go get 'em!",
+        "Morning, $n! Take a deep breath and let's tackle your goals."
       ];
     } else if (hour < 18) {
       generics = [
-        "Good afternoon, $n! Keep that momentum going! 🔥",
-        "Hope your day is going well, $n. Remember to stretch! 🤸",
-        "Afternoon slump? Not for you, $n! Stay focused. 👀",
-        "Halfway through the day, $n! Keep up the great work. ⭐",
-        "Good afternoon! Don't forget to hydrate, $n. 🥤",
-        "Keep crushing it this afternoon, $n! 💪",
-        "You've got this, $n! The day isn't over yet. ⏱️"
+        "Good afternoon, $n! Keep that momentum going!",
+        "Hope your day is going well, $n. Remember to stretch!",
+        "Afternoon slump? Not for you, $n! Stay focused.",
+        "Halfway through the day, $n! Keep up the great work.",
+        "Good afternoon! Don't forget to hydrate, $n.",
+        "Keep crushing it this afternoon, $n!",
+        "You've got this, $n! The day isn't over yet."
       ];
     } else {
       generics = [
-        "Good evening, $n! Time to wind down and recover. 🌙",
-        "Evening, $n! Reflect on today's wins, no matter how small. 🏆",
-        "Great work today, $n. Rest up for tomorrow! 🛌",
-        "Good evening! Make sure to get some quality sleep tonight, $n. 💤",
-        "Day is done, $n. Be proud of the effort you put in! 👏",
-        "Evening, $n! Recovery is just as important as the workout. 🛁",
-        "Time to relax, $n. You earned it today! 🛋️"
+        "Good evening, $n! Time to wind down and recover.",
+        "Evening, $n! Reflect on today's wins, no matter how small.",
+        "Great work today, $n. Rest up for tomorrow!",
+        "Good evening! Make sure to get some quality sleep tonight, $n.",
+        "Day is done, $n. Be proud of the effort you put in!",
+        "Evening, $n! Recovery is just as important as the workout.",
+        "Time to relax, $n. You earned it today!"
       ];
     }
     
     // Performance based overrides
     if (!isRestDay && workoutsDone == workoutsTotal && workoutsTotal > 0) {
       final messages = [
-        "Awesome job crushing your workout today, $n! 💪 Make sure to rest up and hydrate.",
-        "You absolutely nailed your workout, $n! 🔥 I'm so proud of you.",
-        "Workout complete! Way to show up for yourself today, $n. 🏅",
-        "Boom! Workout done. Your body will thank you later, $n. 🙌"
+        "Awesome job crushing your workout today, $n! Make sure to rest up and hydrate.",
+        "You absolutely nailed your workout, $n! I'm so proud of you.",
+        "Workout complete! Way to show up for yourself today, $n.",
+        "Boom! Workout done. Your body will thank you later, $n."
       ];
       return messages[random.nextInt(messages.length)];
     }
     
     if (isRestDay && daysSinceLastWorkout == 0) {
       final messages = [
-        "It's a rest day, $n! Enjoy the recovery, you earned it yesterday. 🛋️",
-        "Take it easy today, $n. Your muscles need time to rebuild! 🧘",
-        "Rest day vibes! Listen to your body and just relax today, $n. 🍃"
+        "It's a rest day, $n! Enjoy the recovery, you earned it yesterday.",
+        "Take it easy today, $n. Your muscles need time to rebuild!",
+        "Rest day vibes! Listen to your body and just relax today, $n."
       ];
       return messages[random.nextInt(messages.length)];
     }
 
     if (steps > 10000) {
       final messages = [
-        "Over 10K steps?! Look at you go, $n! 🏃 Keep that momentum up!",
-        "You're a walking machine today, $n! Incredible step count. 👟",
-        "10,000 steps crushed! Your energy is inspiring, $n. ⚡"
+        "Over 10K steps?! Look at you go, $n! Keep that momentum up!",
+        "You're a walking machine today, $n! Incredible step count.",
+        "10,000 steps crushed! Your energy is inspiring, $n."
       ];
       return messages[random.nextInt(messages.length)];
     }
 
     if (habitsDone == habitsTotal && habitsTotal > 0) {
       final messages = [
-        "Perfect habit streak today! 🌟 Consistency is the secret to results, $n.",
-        "All habits checked off! You're building an incredible foundation, $n. 🧱",
-        "100% on habits today! That's how we build lasting change, $n. 🎯"
+        "Perfect habit streak today! Consistency is the secret to results, $n.",
+        "All habits checked off! You're building an incredible foundation, $n.",
+        "100% on habits today! That's how we build lasting change, $n."
       ];
       return messages[random.nextInt(messages.length)];
     }

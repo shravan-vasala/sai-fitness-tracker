@@ -343,43 +343,36 @@ class ScaffoldWithNavBar extends ConsumerWidget {
         ),
         bottomNavigationBar: SafeArea(
           child: Container(
-            margin: EdgeInsets.only(left: 20, right: 20, bottom: 12),
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
             decoration: BoxDecoration(
               color: context.colors.card,
-              borderRadius: BorderRadius.circular(32),
-              border: Border.all(color: context.colors.border.withValues(alpha: 0.6)),
-              boxShadow: [
-                BoxShadow(
-                  color: context.colors.textDark.withValues(alpha: 0.12),
-                  blurRadius: 20,
-                  offset: Offset(0, 10),
-                ),
-              ],
+              border: Border(top: BorderSide(color: context.colors.border, width: 1)),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _NavItem(
-                  icon: Icons.home_outlined,
-                  activeIcon: Icons.home_rounded,
-                  label: 'Home',
-                  isSelected: navigationShell.currentIndex == 0,
-                  onTap: () => navigationShell.goBranch(0),
+                Expanded(
+                  child: _NavItem(
+                    label: 'home',
+                    isSelected: navigationShell.currentIndex == 0,
+                    onTap: () => navigationShell.goBranch(0),
+                    showBorder: true,
+                  ),
                 ),
-                _NavItem(
-                  icon: Icons.show_chart_outlined,
-                  activeIcon: Icons.show_chart_rounded,
-                  label: 'Progress',
-                  isSelected: navigationShell.currentIndex == 1,
-                  onTap: () => navigationShell.goBranch(1),
+                Expanded(
+                  child: _NavItem(
+                    label: 'progress',
+                    isSelected: navigationShell.currentIndex == 1,
+                    onTap: () => navigationShell.goBranch(1),
+                    showBorder: true,
+                  ),
                 ),
-                _NavItem(
-                  icon: Icons.person_outline_rounded,
-                  activeIcon: Icons.person_rounded,
-                  label: 'Profile',
-                  isSelected: navigationShell.currentIndex == 2,
-                  onTap: () => navigationShell.goBranch(2),
+                Expanded(
+                  child: _NavItem(
+                    label: 'profile',
+                    isSelected: navigationShell.currentIndex == 2,
+                    onTap: () => navigationShell.goBranch(2),
+                    showBorder: false,
+                  ),
                 ),
               ],
           ),
@@ -391,18 +384,16 @@ class ScaffoldWithNavBar extends ConsumerWidget {
 
 class _NavItem extends StatelessWidget {
   const _NavItem({
-    required this.icon,
-    required this.activeIcon,
     required this.label,
     required this.isSelected,
     required this.onTap,
+    this.showBorder = false,
   });
 
-  final IconData icon;
-  final IconData activeIcon;
   final String label;
   final bool isSelected;
   final VoidCallback onTap;
+  final bool showBorder;
 
   @override
   Widget build(BuildContext context) {
@@ -415,34 +406,24 @@ class _NavItem extends StatelessWidget {
         behavior: HitTestBehavior.opaque,
         child: AnimatedContainer(
           duration: Duration(milliseconds: 200),
-          constraints: BoxConstraints(minHeight: 48, minWidth: 48),
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          constraints: BoxConstraints(minHeight: 56),
           decoration: BoxDecoration(
             color: isSelected ? context.colors.primary : Colors.transparent,
-            borderRadius: BorderRadius.circular(20),
+            border: showBorder 
+                ? Border(right: BorderSide(color: context.colors.border, width: 1)) 
+                : null,
           ),
-          child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              isSelected ? activeIcon : icon,
-              color: isSelected ? context.colors.onPrimary : context.colors.textLight,
-              size: 24,
+          alignment: Alignment.center,
+          child: Text(
+            label.toLowerCase(),
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Courier Prime',
+              color: isSelected ? context.colors.onPrimary : context.colors.textDark,
             ),
-            if (isSelected) ...[
-              SizedBox(width: 8),
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                  color: context.colors.onPrimary,
-                ),
-              ),
-            ],
-          ],
+          ),
         ),
-      ),
       ),
     );
   }

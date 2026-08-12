@@ -1,0 +1,19 @@
+<svg width="1024" height="1024" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="160" height="160" fill="#FBFAF7"/>
+  <g fill="#111111">
+    <!-- Left Ear -->
+    <polygon points="30,40 10,70 10,100 40,100 50,60" />
+    <!-- Right Ear -->
+    <polygon points="130,40 150,70 150,100 120,100 110,60" />
+    <!-- Main Head -->
+    <polygon points="50,30 110,30 110,90 50,90" />
+    <!-- Trunk -->
+    <polygon points="70,90 90,90 90,130 85,140 70,140 65,130 65,100" />
+    <!-- Tusks (cut out of the dark head/ears using background color) -->
+    <polygon points="50,90 40,120 45,120 55,90" fill="#FBFAF7"/>
+    <polygon points="110,90 120,120 115,120 105,90" fill="#FBFAF7"/>
+    <!-- Eyes -->
+    <rect x="60" y="60" width="10" height="10" fill="#FBFAF7" />
+    <rect x="90" y="60" width="10" height="10" fill="#FBFAF7" />
+  </g>
+</svg>

@@ -42,18 +42,18 @@ class WeeklySummary {
 
   String generateShareText() {
     final sb = StringBuffer();
-    sb.writeln('💪 My Weekly Fitness Summary');
-    sb.writeln('Score: $weekScore/100 🎯');
+    sb.writeln('My Weekly Fitness Summary');
+    sb.writeln('Score: $weekScore/100');
     sb.writeln('---');
-    sb.writeln('🏋️ Workouts: $workoutsCompleted/$workoutsTotal');
-    sb.writeln('✅ Habits: ${(habitCompletionRate * 100).toInt()}% completion');
-    if (bestHabit != null) sb.writeln('⭐ Best Habit: $bestHabit');
-    if (avgSteps > 0) sb.writeln('👟 Avg Steps: $avgSteps (Best: $bestSteps)');
-    if (avgSleep > 0) sb.writeln('💤 Avg Sleep: ${avgSleep.toStringAsFixed(1)}h');
-    if (avgCalories > 0) sb.writeln('🔥 Avg Calories: $avgCalories kcal');
+    sb.writeln('Workouts: $workoutsCompleted/$workoutsTotal');
+    sb.writeln('Habits: ${(habitCompletionRate * 100).toInt()}% completion');
+    if (bestHabit != null) sb.writeln('Best Habit: $bestHabit');
+    if (avgSteps > 0) sb.writeln('Avg Steps: $avgSteps (Best: $bestSteps)');
+    if (avgSleep > 0) sb.writeln('Avg Sleep: ${avgSleep.toStringAsFixed(1)}h');
+    if (avgCalories > 0) sb.writeln('Avg Calories: $avgCalories kcal');
     if (weightDelta != 0) {
       final deltaStr = weightDelta > 0 ? '+${weightDelta.toStringAsFixed(1)}' : weightDelta.toStringAsFixed(1);
-      sb.writeln('⚖️ Weight Change: $deltaStr');
+      sb.writeln('Weight Change: $deltaStr');
     }
     sb.writeln('---');
     sb.writeln('Tracked with Sthira');

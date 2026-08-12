@@ -1,0 +1,112 @@
+{
+  "planName": "Gym Split — Back / Shoulders / Legs / Chest / Arms",
+  "version": 1,
+  "phase": "Phase 1",
+  "source": "self",
+  "notes": "Standard barbell weighs 19-20 kg — start with an empty bar. For dumbbell work start at 2.5 kg or 5 kg. Sets, reps and rest below are sensible starting defaults, not from the original plan — adjust them.",
+  "days": [
+    {
+      "dayId": "mon_back",
+      "label": "Monday",
+      "title": "Back",
+      "sections": [
+        {
+          "title": "Main Workout",
+          "exercises": [
+            { "name": "Wide Grip Lat Pulldown", "displayName": "Wide Grip Lat Pulldown", "youtubeUrl": "", "searchQuery": "wide grip lat pulldown proper form", "reps": ["8-12", "8-12", "8-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Close Grip Lat Pulldown", "displayName": "Close Grip Lat Pulldown", "youtubeUrl": "", "searchQuery": "close grip lat pulldown form", "reps": ["8-12", "8-12", "8-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Close Grip Cable Row", "displayName": "Close Grip Cable Row", "youtubeUrl": "", "searchQuery": "close grip seated cable row form", "reps": ["8-12", "8-12", "8-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Single Arm Lat Pulldown", "displayName": "Single Arm Pulldown", "youtubeUrl": "", "searchQuery": "single arm lat pulldown form", "reps": ["10-12", "10-12", "10-12"], "note": "", "sideInfo": "Per Arm", "restSecondsAfterSet": 60 },
+            { "name": "Dumbbell Row", "displayName": "Dumbbell Row", "youtubeUrl": "", "searchQuery": "one arm dumbbell row form", "reps": ["8-12", "8-12", "8-12"], "note": "", "sideInfo": "Per Arm", "restSecondsAfterSet": 90 },
+            { "name": "Machine Row (Underhand Grip)", "displayName": "Machine Row (Underhand)", "youtubeUrl": "", "searchQuery": "underhand grip machine row form", "reps": ["8-12", "8-12", "8-12"], "note": "Underhand grip", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Reverse Fly (Pec Deck for Back)", "displayName": "Reverse Fly", "youtubeUrl": "", "searchQuery": "reverse pec deck fly rear delt form", "reps": ["12-15", "12-15", "12-15"], "note": "Pec deck machine reversed", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Shoulder Width Lat Pulldown", "displayName": "Shoulder Width Pulldown", "youtubeUrl": "", "searchQuery": "shoulder width lat pulldown form", "reps": ["8-12", "8-12", "8-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Back Extension Machine", "displayName": "Back Extension", "youtubeUrl": "", "searchQuery": "back extension machine proper form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 }
+          ]
+        }
+      ]
+    },
+    {
+      "dayId": "tue_shoulders",
+      "label": "Tuesday",
+      "title": "Shoulders",
+      "sections": [
+        {
+          "title": "Main Workout",
+          "exercises": [
+            { "name": "Barbell Shoulder Press", "displayName": "Barbell Shoulder Press", "youtubeUrl": "", "searchQuery": "barbell overhead press form", "reps": ["6-10", "6-10", "6-10"], "note": "Standing or seated depending on the weight. Front delts. Empty bar is 20 kg — start there.", "sideInfo": "None", "restSecondsAfterSet": 120 },
+            { "name": "Face Pulls", "displayName": "Face Pulls", "youtubeUrl": "", "searchQuery": "cable face pull rear delt form", "reps": ["12-15", "12-15", "12-15"], "note": "Rear delts", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Cable Lateral Raise", "displayName": "Cable Lateral Raise", "youtubeUrl": "", "searchQuery": "cable lateral raise form", "reps": ["12-15", "12-15", "12-15"], "note": "Lateral delts", "sideInfo": "Per Arm", "restSecondsAfterSet": 60 },
+            { "name": "Seated Dumbbell Shoulder Press", "displayName": "Seated DB Press", "youtubeUrl": "", "searchQuery": "seated dumbbell shoulder press form", "reps": ["8-12", "8-12", "8-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Dumbbell Lateral Raise", "displayName": "Lateral Raise", "youtubeUrl": "", "searchQuery": "dumbbell lateral raise proper form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Cable Rear Delt Fly", "displayName": "Cable Rear Delt Fly", "youtubeUrl": "", "searchQuery": "cable rear delt fly form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Pull Ups", "displayName": "Pull Ups", "youtubeUrl": "", "searchQuery": "pull up proper form beginner", "reps": ["6-10", "6-10", "6-10"], "note": "Use assistance if needed", "sideInfo": "None", "restSecondsAfterSet": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "dayId": "wed_legs",
+      "label": "Wednesday",
+      "title": "Legs",
+      "sections": [
+        {
+          "title": "Main Workout",
+          "exercises": [
+            { "name": "Barbell Squat", "displayName": "Barbell Squat", "youtubeUrl": "", "searchQuery": "barbell back squat proper form", "reps": ["6-10", "6-10", "6-10"], "note": "Start with an empty bar (20 kg)", "sideInfo": "None", "restSecondsAfterSet": 120 },
+            { "name": "Dumbbell Romanian Deadlift", "displayName": "Dumbbell RDL", "youtubeUrl": "", "searchQuery": "dumbbell romanian deadlift form", "reps": ["8-12", "8-12", "8-12"], "note": "Leg curls / RDL with dumbbells", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Lunges", "displayName": "Lunges", "youtubeUrl": "", "searchQuery": "dumbbell walking lunge form", "reps": ["10-12", "10-12", "10-12"], "note": "", "sideInfo": "Per Leg", "restSecondsAfterSet": 90 },
+            { "name": "Hip Abduction Machine", "displayName": "Leg Abduction", "youtubeUrl": "", "searchQuery": "hip abduction machine form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Hip Adduction Machine", "displayName": "Leg Adduction", "youtubeUrl": "", "searchQuery": "hip adduction machine form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Leg Extension", "displayName": "Leg Extension", "youtubeUrl": "", "searchQuery": "leg extension machine form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Dumbbell Squat", "displayName": "Dumbbell Squat", "youtubeUrl": "", "searchQuery": "dumbbell goblet squat form", "reps": ["10-12", "10-12", "10-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Leg Raises", "displayName": "Leg Raises", "youtubeUrl": "", "searchQuery": "hanging leg raise form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 }
+          ]
+        }
+      ]
+    },
+    {
+      "dayId": "thu_chest",
+      "label": "Thursday",
+      "title": "Chest",
+      "sections": [
+        {
+          "title": "Main Workout",
+          "exercises": [
+            { "name": "Flat Barbell Bench Press", "displayName": "Barbell Bench Press", "youtubeUrl": "", "searchQuery": "barbell bench press proper form", "reps": ["6-10", "6-10", "6-10"], "note": "Start with an empty bar (20 kg)", "sideInfo": "None", "restSecondsAfterSet": 120 },
+            { "name": "Incline Dumbbell Press", "displayName": "Incline DB Press", "youtubeUrl": "", "searchQuery": "incline dumbbell press form", "reps": ["8-12", "8-12", "8-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Cable Fly", "displayName": "Cable Fly", "youtubeUrl": "", "searchQuery": "cable chest fly form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Decline Dumbbell Press", "displayName": "Decline DB Press", "youtubeUrl": "", "searchQuery": "decline dumbbell press form", "reps": ["8-12", "8-12", "8-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 90 },
+            { "name": "Pec Deck Fly", "displayName": "Pec Deck Fly", "youtubeUrl": "", "searchQuery": "pec deck machine fly form", "reps": ["12-15", "12-15", "12-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Push Ups", "displayName": "Push Ups", "youtubeUrl": "", "searchQuery": "push up proper form", "reps": ["10-15", "10-15", "10-15"], "note": "Finisher — go to near failure", "sideInfo": "None", "restSecondsAfterSet": 60 }
+          ]
+        }
+      ]
+    },
+    {
+      "dayId": "fri_arms",
+      "label": "Friday",
+      "title": "Biceps, Triceps, Cardio & Abs",
+      "sections": [
+        {
+          "title": "Main Workout",
+          "exercises": [
+            { "name": "Dumbbell Bicep Curl", "displayName": "Dumbbell Curl", "youtubeUrl": "", "searchQuery": "dumbbell bicep curl proper form", "reps": ["10-12", "10-12", "10-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Hammer Curl", "displayName": "Hammer Curl", "youtubeUrl": "", "searchQuery": "hammer curl form", "reps": ["10-12", "10-12", "10-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Cable Tricep Push Down", "displayName": "Tricep Push Down", "youtubeUrl": "", "searchQuery": "cable tricep pushdown form", "reps": ["10-15", "10-15", "10-15"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 },
+            { "name": "Overhead Tricep Extension", "displayName": "Tricep Extension", "youtubeUrl": "", "searchQuery": "overhead tricep extension form", "reps": ["10-12", "10-12", "10-12"], "note": "", "sideInfo": "None", "restSecondsAfterSet": 60 }
+          ]
+        },
+        {
+          "title": "Cardio & Abs",
+          "exercises": [
+            { "name": "Cycling or Running", "displayName": "Cycling / Running", "youtubeUrl": "", "searchQuery": "", "reps": [1], "durationSeconds": 1200, "note": "20 minutes steady pace — adjust to taste", "sideInfo": "None", "restSecondsAfterSet": 0 },
+            { "name": "Abs Circuit", "displayName": "Abs Circuit", "youtubeUrl": "", "searchQuery": "10 minute abs workout gym", "reps": [1], "durationSeconds": 600, "note": "Choose your own ab exercises or follow a 10-minute routine", "sideInfo": "None", "restSecondsAfterSet": 0 }
+          ]
+        }
+      ]
+    },
+    { "dayId": "sat_rest", "label": "Saturday", "title": "Rest", "sections": [] },
+    { "dayId": "sun_rest", "label": "Sunday", "title": "Rest", "sections": [] }
+  ]
+}

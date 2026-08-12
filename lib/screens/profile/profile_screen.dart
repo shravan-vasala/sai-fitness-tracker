@@ -247,7 +247,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               ),
               SizedBox(height: 16),
               Text(
-                'Made with ❤️ for Bodamma',
+                'Made with love by Shravan Vasala',
                 style: TextStyle(
                   fontSize: 12,
                   color: context.colors.textLight,
@@ -420,8 +420,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               textCapitalization: TextCapitalization.words,
               decoration: InputDecoration(
                 labelText: 'Coach name',
-                hintText: 'e.g. Shravan',
-                prefixIcon: Icon(Icons.sports_rounded),
+                hintText: '',                prefixIcon: Icon(Icons.sports_rounded),
                 filled: true,
                 fillColor: context.colors.inputFill,
               ),

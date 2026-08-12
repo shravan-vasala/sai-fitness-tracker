@@ -13,6 +13,8 @@ import '../../services/firestore_sync_service.dart';
 import '../../models/habit.dart';
 import '../../utils/habit_icons.dart';
 
+import 'package:flutter_svg/flutter_svg.dart';
+
 String kOnboardingCompletedKey = 'onboarding_completed';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
@@ -330,7 +332,7 @@ class _NavButtons extends StatelessWidget {
             ),
           SizedBox(width: 8),
           _PrimaryButton(
-            label: _isLastPage ? 'Get Started 🚀' : 'Next',
+            label: _isLastPage ? 'Get Started' : 'Next',
             onPressed: onNext,
           ),
         ],
@@ -396,11 +398,17 @@ class _WelcomePage extends StatelessWidget {
             width: 100,
             height: 100,
             decoration: BoxDecoration(
-              color: context.colors.primary,
-              borderRadius: BorderRadius.circular(32),
+              color: Colors.transparent,
+              borderRadius: BorderRadius.zero,
+              border: Border.all(color: context.colors.border, width: 2),
             ),
             child: Center(
-              child: Icon(Icons.fitness_center_rounded, size: 48, color: context.colors.onPrimary),
+              child: Image.asset(
+                'assets/icon/logo.png',
+                width: 100,
+                height: 100,
+                fit: BoxFit.contain,
+              ),
             ),
           ),
           SizedBox(height: 32),
@@ -536,14 +544,14 @@ class _ProfilePage extends StatelessWidget {
           _FieldLabel('Your Name *'),
           _InputField(
             controller: nameController,
-            hint: 'e.g. Bodamma',
+            hint: '',
             capitalization: TextCapitalization.words,
           ),
           SizedBox(height: 20),
           _FieldLabel('Coach name (optional)'),
           _InputField(
             controller: coachNameController,
-            hint: 'e.g. Shravan',
+            hint: '',
             capitalization: TextCapitalization.words,
           ),
           SizedBox(height: 8),

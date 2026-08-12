@@ -93,15 +93,15 @@ class Meal {
   String get icon {
     switch (type) {
       case 'breakfast':
-        return '🌅';
+        return '[B]';
       case 'lunch':
-        return '☀️';
+        return '[L]';
       case 'snack':
-        return '🍎';
+        return '[S]';
       case 'dinner':
-        return '🌙';
+        return '[D]';
       default:
-        return '🍽️';
+        return '[M]';
     }
   }
 }

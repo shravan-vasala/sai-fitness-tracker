@@ -13,10 +13,7 @@ class AddMealSlotDialog extends ConsumerStatefulWidget {
 
 class _AddMealSlotDialogState extends ConsumerState<AddMealSlotDialog> {
   final _nameCtrl = TextEditingController();
-  String _selectedEmoji = '🍴';
   bool _addToEveryDay = false;
-
-  final _emojis = ['🍴', '🥤', '🍌', '🥜', '🍚', '🫖', '🍪', '🥩', '🥑', '🥪', '🥣', '🥗'];
 
   @override
   void dispose() {
@@ -36,7 +33,7 @@ class _AddMealSlotDialogState extends ConsumerState<AddMealSlotDialog> {
         ..add({
           'id': id,
           'name': name,
-          'emoji': _selectedEmoji,
+          'emoji': '',
           'isDefault': false,
         });
       ref.read(profileProvider.notifier).updateProfile(profile.copyWith(customMealSlots: updatedSlots));
@@ -45,7 +42,7 @@ class _AddMealSlotDialogState extends ConsumerState<AddMealSlotDialog> {
     // Create an empty log entry for today so it immediately appears (and persists name/emoji)
     final slotLog = MealSlotLog(
       name: name,
-      emoji: _selectedEmoji,
+      emoji: '',
       items: [],
       totalCalories: 0,
       totalProtein: 0,
@@ -84,28 +81,6 @@ class _AddMealSlotDialogState extends ConsumerState<AddMealSlotDialog> {
                 hintText: 'e.g. Post-workout shake',
                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               ),
-            ),
-            SizedBox(height: 20),
-            Text('Choose an emoji', style: TextStyle(fontWeight: FontWeight.w600, color: context.colors.textMedium)),
-            SizedBox(height: 8),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: _emojis.map((emoji) {
-                final isSelected = emoji == _selectedEmoji;
-                return GestureDetector(
-                  onTap: () => setState(() => _selectedEmoji = emoji),
-                  child: Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: isSelected ? context.colors.primary.withValues(alpha: 0.2) : context.colors.card,
-                      border: Border.all(color: isSelected ? context.colors.primary : context.colors.border),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Text(emoji, style: TextStyle(fontSize: 24)),
-                  ),
-                );
-              }).toList(),
             ),
             SizedBox(height: 24),
             Row(

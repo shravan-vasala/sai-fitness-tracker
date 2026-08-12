@@ -138,7 +138,7 @@ final workoutPlanProvider = Provider<WorkoutPlan?>((ref) {
   final repo = ref.watch(workoutRepoProvider);
   final activePlanId =
       ref.watch(profileProvider.select((p) => p.activeWorkoutPlan));
-  return repo.getActivePlan(preferredKey: activePlanId ?? 'beginner_plan');
+  return repo.getActivePlan(preferredKey: activePlanId ?? 'gym_split_plan');
 });
 
 final workoutDayProvider = Provider.family<WorkoutDay?, String>((ref, dayId) {

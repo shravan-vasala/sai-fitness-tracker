@@ -46,6 +46,7 @@ dependencies:
   flutter_timezone: ^5.1.0
   confetti: ^0.8.0
   wakelock_plus: ^1.2.8
+  flutter_svg: ^2.0.10
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -56,10 +57,11 @@ flutter:
   uses-material-design: true
   assets:
     - assets/data/
+    - assets/icon/
 
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/icon/app_icon.png"
+  image_path: "assets/icon/logo.png"
   adaptive_icon_background: "#7C3AED"
   adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"

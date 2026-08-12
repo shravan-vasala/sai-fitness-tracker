@@ -108,7 +108,7 @@ class PastDaySummarySheet extends ConsumerWidget {
       statusColor = context.colors.green;
     } else {
       statusText = "Partial";
-      statusColor = Colors.amber.shade700;
+      statusColor = context.colors.textDark;
     }
 
     final missedHabits = applicableHabits
@@ -123,8 +123,8 @@ class PastDaySummarySheet extends ConsumerWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: context.colors.lavender,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        color: context.colors.card,
+        borderRadius: BorderRadius.zero,
       ),
       child: SafeArea(
         child: Column(

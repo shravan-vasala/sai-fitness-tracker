@@ -187,16 +187,16 @@ class _PrSummary extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Color(0xFFFFD700).withValues(alpha: 0.1),
-        border: Border.all(color: Color(0xFFFFD700).withValues(alpha: 0.3)),
-        borderRadius: BorderRadius.circular(16),
+        color: context.colors.primary.withValues(alpha: 0.05),
+        border: Border.all(color: context.colors.primary, width: 1),
+        borderRadius: BorderRadius.circular(0),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.emoji_events_rounded, color: Color(0xFFB8860B), size: 24),
+              Icon(Icons.emoji_events_rounded, color: context.colors.textDark, size: 24),
               SizedBox(width: 8),
               Text(
                 'PERSONAL RECORDS',
@@ -204,33 +204,33 @@ class _PrSummary extends StatelessWidget {
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.2,
-                  color: Color(0xFFB8860B),
+                  color: context.colors.textDark,
                 ),
               ),
             ],
           ),
           SizedBox(height: 12),
           if (pr.maxWeight > 0)
-            _buildPrRow('Max Weight', '${pr.maxWeight}kg × ${pr.maxWeightReps}'),
+            _buildPrRow(context, 'Max Weight', '${pr.maxWeight}kg × ${pr.maxWeightReps}'),
           if (pr.maxReps > 0 && (pr.maxWeight == 0 || pr.maxReps > pr.maxWeightReps))
-            _buildPrRow('Max Reps', '${pr.maxReps} reps @ ${pr.maxRepsWeight}kg'),
+            _buildPrRow(context, 'Max Reps', '${pr.maxReps} reps @ ${pr.maxRepsWeight}kg'),
           if (pr.estimated1RM > 0)
-            _buildPrRow('Est. 1RM', '${pr.estimated1RM.toStringAsFixed(1)}kg'),
+            _buildPrRow(context, 'Est. 1RM', '${pr.estimated1RM.toStringAsFixed(1)}kg'),
           if (pr.maxVolume > 0)
-            _buildPrRow('Max Volume', '${pr.maxVolume}kg'),
+            _buildPrRow(context, 'Max Volume', '${pr.maxVolume}kg'),
         ],
       ),
     );
   }
 
-  Widget _buildPrRow(String label, String value) {
+  Widget _buildPrRow(BuildContext context, String label, String value) {
     return Padding(
       padding: EdgeInsets.only(bottom: 4),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(label, style: TextStyle(fontSize: 14, color: Color(0xFF8B6508))),
-          Text(value, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Color(0xFF8B6508))),
+          Text(label, style: TextStyle(fontSize: 14, color: context.colors.textMedium)),
+          Text(value, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: context.colors.textDark)),
         ],
       ),
     );

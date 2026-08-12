@@ -226,19 +226,20 @@ class ExerciseCard extends ConsumerWidget {
                               padding: EdgeInsets.symmetric(
                                   horizontal: 8, vertical: 3),
                               decoration: BoxDecoration(
-                                color: Color(0xFFFFD700).withValues(alpha: 0.2), // Gold tint
-                                borderRadius: BorderRadius.circular(8),
+                                color: context.colors.primary.withValues(alpha: 0.1),
+                                border: Border.all(color: context.colors.primary, width: 1),
+                                borderRadius: BorderRadius.circular(0),
                               ),
                               child: Row(
                                 children: [
-                                  Icon(Icons.emoji_events, size: 12, color: Color(0xFFB8860B)),
+                                  Icon(Icons.emoji_events, size: 12, color: context.colors.textDark),
                                   SizedBox(width: 2),
                                   Text(
                                     pr.maxWeight > 0 ? '${pr.maxWeight}kg' : '${pr.maxReps} reps',
                                     style: TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.w700,
-                                      color: Color(0xFFB8860B),
+                                      color: context.colors.textDark,
                                     ),
                                   ),
                                 ],

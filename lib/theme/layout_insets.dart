@@ -13,16 +13,16 @@ const double kShellScrollBottomPadding = kFloatingNavClearance + 16;
 const double kScreenPadding = 20;
 
 /// Default surface card corner radius (matches [CardTheme]).
-const double kCardRadius = 20;
+const double kCardRadius = 0;
 
 /// Modal bottom sheet top corner radius (matches [BottomSheetTheme]).
-const double kSheetRadius = 24;
+const double kSheetRadius = 0;
 
 /// Primary / elevated button corner radius.
-const double kButtonRadius = 16;
+const double kButtonRadius = 0;
 
 /// Outlined button corner radius (theme default).
-const double kOutlinedButtonRadius = 12;
+const double kOutlinedButtonRadius = 0;
 
 /// Full-width primary save CTA height.
 const double kPrimaryButtonHeight = 52;

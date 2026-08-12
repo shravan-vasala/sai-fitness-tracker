@@ -22,21 +22,21 @@ class AppTheme {
         onSurface: AppColorsLight().textDark,
         onError: AppColorsLight().white,
       ),
-      textTheme: GoogleFonts.quicksandTextTheme(
+      textTheme: GoogleFonts.courierPrimeTextTheme(
         TextTheme(
-          headlineLarge: TextStyle(
+          headlineLarge: GoogleFonts.lora(
             fontSize: 28,
             fontWeight: FontWeight.w800,
             color: AppColorsLight().textDark,
             letterSpacing: -0.5,
           ),
-          headlineMedium: TextStyle(
+          headlineMedium: GoogleFonts.lora(
             fontSize: 22,
             fontWeight: FontWeight.w700,
             color: AppColorsLight().textDark,
             letterSpacing: -0.3,
           ),
-          headlineSmall: TextStyle(
+          headlineSmall: GoogleFonts.lora(
             fontSize: 18,
             fontWeight: FontWeight.w700,
             color: AppColorsLight().textDark,
@@ -96,7 +96,8 @@ class AppTheme {
         color: AppColorsLight().card,
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.zero,
+          side: BorderSide(color: AppColorsLight().border, width: 1),
         ),
         shadowColor: AppColorsLight().textDark.withValues(alpha: 0.03),
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -110,7 +111,7 @@ class AppTheme {
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: false,
-        titleTextStyle: GoogleFonts.quicksand(
+        titleTextStyle: GoogleFonts.lora(
           fontSize: 20,
           fontWeight: FontWeight.w700,
           color: AppColorsLight().textDark,
@@ -139,7 +140,7 @@ class AppTheme {
           elevation: 0,
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 14),
           shape: const StadiumBorder(),
-          textStyle: GoogleFonts.quicksand(
+          textStyle: GoogleFonts.courierPrime(
             fontSize: 16,
             fontWeight: FontWeight.w700,
           ),
@@ -151,7 +152,7 @@ class AppTheme {
           side: BorderSide(color: AppColorsLight().primary, width: 1.5),
           padding: EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           shape: const StadiumBorder(),
-          textStyle: GoogleFonts.quicksand(
+          textStyle: GoogleFonts.courierPrime(
             fontSize: 14,
             fontWeight: FontWeight.w700,
           ),
@@ -162,12 +163,12 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         modalBackgroundColor: AppColorsLight().card,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          borderRadius: BorderRadius.vertical(top: Radius.zero),
         ),
       ),
       snackBarTheme: SnackBarThemeData(
         backgroundColor: AppColorsLight().textDark,
-        contentTextStyle: GoogleFonts.quicksand(color: AppColorsLight().white),
+        contentTextStyle: GoogleFonts.courierPrime(color: AppColorsLight().white),
         behavior: SnackBarBehavior.floating,
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -220,17 +221,17 @@ class AppTheme {
       dialogTheme: DialogThemeData(
         backgroundColor: AppColorsLight().card,
         surfaceTintColor: Colors.transparent,
-        titleTextStyle: GoogleFonts.quicksand(
+        titleTextStyle: GoogleFonts.courierPrime(
           fontSize: 20,
           fontWeight: FontWeight.w700,
           color: AppColorsLight().textDark,
         ),
-        contentTextStyle: GoogleFonts.quicksand(
+        contentTextStyle: GoogleFonts.courierPrime(
           fontSize: 14,
           fontWeight: FontWeight.w400,
           color: AppColorsLight().textMedium,
         ),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       ),
       dropdownMenuTheme: DropdownMenuThemeData(
         textStyle: TextStyle(color: AppColorsLight().textDark, fontSize: 14),
@@ -240,12 +241,12 @@ class AppTheme {
         ),
       ),
       listTileTheme: ListTileThemeData(
-        titleTextStyle: GoogleFonts.quicksand(
+        titleTextStyle: GoogleFonts.courierPrime(
           fontSize: 16,
           fontWeight: FontWeight.w600,
           color: AppColorsLight().textDark,
         ),
-        subtitleTextStyle: GoogleFonts.quicksand(
+        subtitleTextStyle: GoogleFonts.courierPrime(
           fontSize: 13,
           fontWeight: FontWeight.w400,
           color: AppColorsLight().textMedium,
@@ -277,25 +278,25 @@ class AppTheme {
         onSurface: AppColorsDark().onSurface,
         onError: AppColorsDark().onPrimary,
       ),
-      textTheme: GoogleFonts.quicksandTextTheme(
+      textTheme: GoogleFonts.courierPrimeTextTheme(
         ThemeData(brightness: Brightness.dark).textTheme,
       ).apply(
         bodyColor: AppColorsDark().textDark,
         displayColor: AppColorsDark().textDark,
       ).copyWith(
-        headlineLarge: TextStyle(
+        headlineLarge: GoogleFonts.lora(
           fontSize: 28,
           fontWeight: FontWeight.w800,
           color: AppColorsDark().textDark,
           letterSpacing: -0.5,
         ),
-        headlineMedium: TextStyle(
+        headlineMedium: GoogleFonts.lora(
           fontSize: 22,
           fontWeight: FontWeight.w700,
           color: AppColorsDark().textDark,
           letterSpacing: -0.3,
         ),
-        headlineSmall: TextStyle(
+        headlineSmall: GoogleFonts.lora(
           fontSize: 18,
           fontWeight: FontWeight.w700,
           color: AppColorsDark().textDark,
@@ -351,7 +352,8 @@ class AppTheme {
         color: AppColorsDark().card,
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
+          borderRadius: BorderRadius.zero,
+          side: BorderSide(color: AppColorsDark().border, width: 1),
         ),
         shadowColor: AppColorsDark().textDark.withValues(alpha: 0.03),
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -365,7 +367,7 @@ class AppTheme {
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: false,
-        titleTextStyle: GoogleFonts.quicksand(
+        titleTextStyle: GoogleFonts.lora(
           fontSize: 20,
           fontWeight: FontWeight.w700,
           color: AppColorsDark().textDark,
@@ -394,7 +396,7 @@ class AppTheme {
           elevation: 0,
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 14),
           shape: const StadiumBorder(),
-          textStyle: GoogleFonts.quicksand(
+          textStyle: GoogleFonts.courierPrime(
             fontSize: 16,
             fontWeight: FontWeight.w700,
           ),
@@ -406,7 +408,7 @@ class AppTheme {
           side: BorderSide(color: AppColorsDark().primary, width: 1.5),
           padding: EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           shape: const StadiumBorder(),
-          textStyle: GoogleFonts.quicksand(
+          textStyle: GoogleFonts.courierPrime(
             fontSize: 14,
             fontWeight: FontWeight.w700,
           ),
@@ -417,12 +419,12 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
         modalBackgroundColor: AppColorsDark().card,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+          borderRadius: BorderRadius.vertical(top: Radius.zero),
         ),
       ),
       snackBarTheme: SnackBarThemeData(
         backgroundColor: AppColorsDark().surface,
-        contentTextStyle: GoogleFonts.quicksand(color: AppColorsDark().textDark),
+        contentTextStyle: GoogleFonts.courierPrime(color: AppColorsDark().textDark),
         behavior: SnackBarBehavior.floating,
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -475,17 +477,17 @@ class AppTheme {
       dialogTheme: DialogThemeData(
         backgroundColor: AppColorsDark().card,
         surfaceTintColor: Colors.transparent,
-        titleTextStyle: GoogleFonts.quicksand(
+        titleTextStyle: GoogleFonts.courierPrime(
           fontSize: 20,
           fontWeight: FontWeight.w700,
           color: AppColorsDark().textDark,
         ),
-        contentTextStyle: GoogleFonts.quicksand(
+        contentTextStyle: GoogleFonts.courierPrime(
           fontSize: 14,
           fontWeight: FontWeight.w400,
           color: AppColorsDark().textMedium,
         ),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       ),
       dropdownMenuTheme: DropdownMenuThemeData(
         textStyle: TextStyle(color: AppColorsDark().textDark, fontSize: 14),
@@ -495,12 +497,12 @@ class AppTheme {
         ),
       ),
       listTileTheme: ListTileThemeData(
-        titleTextStyle: GoogleFonts.quicksand(
+        titleTextStyle: GoogleFonts.courierPrime(
           fontSize: 16,
           fontWeight: FontWeight.w600,
           color: AppColorsDark().textDark,
         ),
-        subtitleTextStyle: GoogleFonts.quicksand(
+        subtitleTextStyle: GoogleFonts.courierPrime(
           fontSize: 13,
           fontWeight: FontWeight.w400,
           color: AppColorsDark().textMedium,
